@@ -99,7 +99,9 @@ bot.on('message:new_chat_members', async (ctx, next) => {
 
         try{
             await handle.RestrictMember.MuteMember(ctx, ctx.chat.id, ctx.from.id);
-        } catch(e) {}
+        } catch(e) {
+            continue;
+        }
 
         let fullname = ctx.from.last_name ? ctx.from.first_name + " " + ctx.from.last_name : ctx.from.first_name;
         let tag = Utilities.create_tag_html(fullname, ctx.from.id);
