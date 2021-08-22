@@ -93,7 +93,7 @@ bot.on('message:new_chat_members', async (ctx, next) => {
         ctx.from.last_name = user.last_name;
         ctx.from.is_bot = user.is_bot;
 
-        if(from_bot) {
+        if(ctx.from.is_bot) {
             continue;
         }
 
