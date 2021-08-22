@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+      "allowJs": true,
+      "strict": true,
+      "esModuleInterop": true,
+      "baseUrl": "./src",
+      "target": "ES2016",
+      "module": "CommonJS",
+      "pretty": true,
+      "skipLibCheck": true,
+      "outDir": "./run",
+      "experimentalDecorators": true
+  },
+  "exclude": ["node_modules", "run"],
+  "include": ["src/**/*.ts"]
+}

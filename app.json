@@ -1,0 +1,26 @@
+{
+    "name" : "captcha_bot",
+    "keywords": [
+      "captcha",
+      "bot",
+      "telegram"
+    ],
+    "logo": "https://i.ibb.co/n3Wq9pr/upload-by-tembaksajabot.jpg",
+    "env": {
+        "BOT_TOKEN" : {
+            "description" : "BOT_TOKEN from @botfather",
+            "required" : true
+        },
+        "DB_URI" : {
+            "description" : "Your MongoDb URI",
+            "required" : true
+        }
+    },
+    "formation": {
+        "worker" : {
+            "quantity" : 1,
+            "size" : "free"
+        }
+    },
+    "stack" : "Container"
+}
