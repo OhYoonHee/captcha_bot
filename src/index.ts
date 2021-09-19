@@ -85,8 +85,7 @@ bot.filter(ctx => ["group", "supergroup"].includes(ctx.chat?.type as string)).us
 });
 
 bot.on('message:new_chat_members', async (ctx, next) => {
-    let from_bot = ctx.from.is_bot;
-
+    if( ctx.message.new_chat_members == undefined) return;
     for(let user of ctx.message.new_chat_members) {
         ctx.from.id = user.id;
         ctx.from.first_name = user.first_name;

@@ -4,9 +4,9 @@
 ```shell
 $ npm install -g yarn
 ```
-- Typescript
+- Typescript (v4.1.5)
 ```shell
-$ npm install -g typescript
+$ npm install -g typescript@4.1.5
 ```
 
 ## ENV
