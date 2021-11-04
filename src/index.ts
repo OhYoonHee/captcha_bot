@@ -44,7 +44,9 @@ cron.schedule('*/20 * * * * *', async () => {
                 await bot.api.banChatMember(room.chat_id, room.user_id);
             }
         } catch(e) {};
-        let kirim_group = await bot.api.sendMessage(room.chat_id, `#FAILED\n${tag} Failed Verified in ${json.timeout} minutes`);
+        let kirim_group = await bot.api.sendMessage(room.chat_id, `#FAILED\n${tag} Failed Verified in ${json.timeout} minutes`, {
+            parse_mode: "HTML"
+        });
         setTimeout(async () => {
             try{
                 await bot.api.deleteMessage(kirim_group.chat.id, kirim_group.message_id);
