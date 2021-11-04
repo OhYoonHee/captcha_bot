@@ -62,6 +62,7 @@ bot.catch(async (error) => {
     console.log(`ERROR : ${error.message}`);
     return;
 });
+process.on('unhandledRejection', console.error);
 
 bot.filter(ctx => ["group", "supergroup"].includes(ctx.chat?.type as string)).use(async (ctx, next) => {
     let chat_id = ctx.chat?.id as number;
@@ -143,7 +144,7 @@ bot.on('callback_query:data', async (ctx, next) => {
 })
 
 bot.start({
-    onStart : ( async (botinfo) => {
+    onStart : ( async (botinfo: any) => {
         console.log("Bot run....");
         await connect_database();
         console.log("Database connected");

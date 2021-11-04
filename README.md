@@ -4,10 +4,6 @@
 ```shell
 $ npm install -g yarn
 ```
-- Typescript (v4.1.5)
-```shell
-$ npm install -g typescript@4.1.5
-```
 
 ## ENV
 `BOT_TOKEN` : Your bot token from [@botfather](https://t.me/botfather)\
